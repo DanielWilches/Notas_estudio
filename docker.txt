@@ -1,0 +1,92 @@
+Docker: Proyecto Open Source para empaquetar y trasportat, administrar y ejecutar cualquier aplicación como un contenedor ligero.
+
+
+Docker no tiene hypervisor si no que usa las funcionalidades del kernel para encapsular el sistema, los contenedores se comportan como máquinas independientes
+
+EL objetivo es que una app funcione en cuealquier hardware ya que todo viene contenido y entonces puede ser trasladado sin problema.
+
+
+Contenedores: Conjunto de tecnologias que se agrupan y aislan entre si aplicaiones o grupos y aislar entre si aplicaciones o grupo de aplicaciones que se ejecuatan sobre un mismo núcleo el sistema operativo.
+	
+    -Namespaces: Permite a la aplicación que corre en un 		contenedor de Docker tener una vista de los recursos del 		sistema operativo.
+    -Cgroups: Permite limitar y medir los recursos que se 		encuentran disponibles en el sistema operativo.
+    -Chroot: Permite tener en el contenedor una vista de un 		sistema “falso” para el mismo, es decir, crea su propio 		entorno de ejecución con su propio root y home.
+    -Logging: Linea de comandos.
+    -Consola.
+
+Algunas de las características más notables de un contenedor son:
+
+-Los contenedores son más livianos (ya que trabajan 	   		directamente sobre el Kernel) que las maquinas virtuales.
+-No es necesario instalar un sistema operativo por contenedor.
+-Menor uso de los recursos de la máquina.
+-Mayor cantidad de contenedores por equipo físico.
+-Mejor portabilidad.
+-Escalado horizontal: Multiples instancias configuradas en un 		      balanceador de carga.
+
+COMANDOS INICIALES:
+
+docker : Lista de comandos
+docker version : Version del demonio y del cliente.
+docker info : Información del sistema.
+docker ps : Ver estado de contenedores que estan corrienedo.
+docker run : Crear in contenedor 
+docker run --name name 
+docker rm id_container : Eliminar contenedor.
+docker stats : Ver estado de los contenedores.
+
+
+IMAGENES: Son plantillas que incluyen los binarios y las librerias necesariar para correr la aplicación.
+
+Dockerfile: Archivo de texto plano que contiene los comandos necesarios para automatizar la creación de una imagen para ser usada en eninstancias especificas.
+  
+  Comandos;
+  FROM : IMGANE
+  MAINTEINER : QUIEN MANTIENE EL CONTENEDOR.
+  RUN : EJECUTA INSTRUCCIONES.
+  ADD O COPY : AÑADE FICHEROS.
+  ENV : VARIABLES DE ENTORNO.
+  EXPOSE : INDICAR EL PUERTO.
+  ENTRYPOINT/CMD : DEFINE EL PROCESO QUE SE EJECUTA, POR 	DEFECTO /	bin/sh -c
+  
+Tipos de arquitecturas:
+Monolitica: autonoma  es solo un servicio.
+Microservicios: Ofrece que cada componente este aislado.
+
+
+---Intalación linux
+-sudo -su
+-Instalar open ssh
+-configurarlo y con nano (ctr+0 + intro +ctr+x)
+-/etc/init.d/ssh restar
+-ssh.service.
+
+-docker compose desde el host 
+ -ssh nombre@ip
+ -sudo su 
+  -estamos en la maquina
+ -ip a
+ -apt installa docker.io
+ -docker
+ -docker run
+  -docker componse
+ -apt install docker-compose -y 
+ 
+-Crear volumenes.
+	docker volume -help
+	docker run -dti --name web -p 80:80 -v data:/user/local/apache2
+	
+	- docker inspect
+
+
+
+------------------------------------------------------------------
+DOCKER CON FAZT CODE:
+
+	
+	
+	
+    
+
+
+
+
