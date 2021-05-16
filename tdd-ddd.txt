@@ -1,0 +1,97 @@
+----TDD Test Driven development
+Es una filosofia de desarrollo de software que nos indica que antes de escribir el software debemos escribir los test que este debe superar, el test literalmente debe guiar el dearrollo.
+
+CIRCULO DE LA VIDA TDD (ciclo)
+TEST FAILS : falla
+TEST PASSES : hacemos que pase
+REFACTOR : Limpiar el código.
+
+Los test: consisten en lanzar una función y debemos indicarle que es lo que esperamos de ella.
+
+--------------------------------------------------------------------
+DDD: Domain-Driven Desing.
+Enfoque de desarrollo de software, que representa distintas claves, terminologías y patrones utilizados para desarrollar donde el dominio es lo más central e importante de una determinada organización.
+Entonces es tomar los datos de mi cliente del dominio y tomar esa plastilina y modelarla.
+
+Sus principios se basan en:
+
+-Colocar los modelos y reglas de negocio de la organización, en el core de la aplicación
+-Basar nuestro dominio complejo, en un modelo de software.
+-Se utiliza para tener una mejor perspectiva a nivel de colaboración entre expertos del dominio y los desarrolladores, para concebir un software con los objetivos bien claros.
+
+Tactical Desing:
+
+-----Elementos del dominio:
+-Entities: Son objetos que tiene identidada como un ID.
+ Las entidades son capaces de ser buscadas, almacenadas y recuperadas. (track, look it, retrieve and store)
+ Entonces las entidades deben cumplor el SRP(Principio de una unica responsabilidad).
+ 
+-Value Objects :Objetos que no necesariamente se comportan como
+una entidad, en el caso de objetos que tengan un comportamiento bien definido en el que se describe ciertos aspectos del dominio.
+
+Por ejemplo: en un sistema de turnos, podríamos querer agrupar el rango de fechas y que tenga un comportamiento especial.
+Entonces, una entidad Turno, va a tener un rango de fechas que representa el comienzo y el fin del mismo.
+Entonces, los Value Objects también respetan el principio de cohesión y encapsulamiento de responsabilidades!
+
+Estos son inmutables, sin identidad, no se modifica el código.
+
+-Services:
+Sirven de orquestadores de varias entidades que colaboran entre si, y de lógica que no pertenece a las propias entidades.
+
+
+Un ejemplo podría ser la operación de “transferencia” entre dos cuentas bancarias: ese comportamiento ¿a que objeto le pertenece? ¿al emisor? ¿o al receptor? En cualquier lugar que lo situemos, pareciera no encajar con respecto al comportamiento que una cuenta bancaria debe tener.
+Para estos casos, seguramente necesitemos agrupar esta lógica en objetos particulares, los llamados Servicios de Dominio
+
+-Modules:
+Los módulos son “espacios” separados que sirven para organizar el código: sirve como un contenedor para un conjunto de clases específicas de la aplicación.
+
+-Aggregates:
+Una agregación tiene una sola raíz y todas las operaciones deben realizarse a través de ella. Esta raíz es una entidad, puede tener referencias a los objetos agregados, pero ningún objeto del exterior puede tener referencias a los objetos dentro de la agregación, toda operación debe ocurrir por la raíz. 
+
+-Factories:
+Este objeto, tendrá la responsabilidad de fabricar objetos complejos, centralizando el conocimiento de la fabricación (y que no quede desperdigada por todo nuestro código), mejorando la calidad del mismo, generando código testeable.
+
+-Repositories:
+Toda la lógica o todo lo que se va a persistir, debería estar encapsulada en los Repositorios.
+Cada Aggregate Root debería tener asociado un repositorio, así como las entidades que no se encuentran dentro de agregaciones
+
+De manera simple, podríamos decir que los repositorios tendrían que tener las operaciones básicas de Create, Retrieve, Update, Delete (querido CRUD).
+
+-Domain Events: Por ejemplo que se a agregado o eliminado algo y con esto se hace algo en el sistema.
+
+-Layered Architecture: Todo esta dentro de la arquitectura de capas o hexagonal.
+
+-Lenguaje ubuqio: como esta en el dominio va al código.
+-Bounded context:
+
+Strategic Design:
+-Integración continua: Ir hacer por cada cambio la integración continua.
+
+-Context Map: Maper cada termino del mundo real a conceptos lógicos.
+
+-Big Ball of Mud: Permite segregar el código, elimina el código espaguetti.
+
+-Anticorruption Layer: EL repositorio que no contaminara el dominio.
+
+-Separate ways: Contexto de usuarios.
+
+-Open Host Service : Creación de API o host con el que nos comunicaremos,
+
+-Published languge: 
+
+-Shared Kernal.
+
+-Customer/supplier teams.
+
+-Conformist.
+
+-VIDEOS SOBRE ARQUITECTURAS LIMPIAS.
+
+https://www.youtube.com/watch?v=GZ9ic9QSO5U
+https://www.youtube.com/watch?v=WJk71RXxWTo
+https://www.youtube.com/watch?v=y3MWfPDmVqo
+
+
+--Buenas parcticas y arquitecturas limpias Bancolombia
+https://www.youtube.com/watch?v=gbQLhakSbA4
+
