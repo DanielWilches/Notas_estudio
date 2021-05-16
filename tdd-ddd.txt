@@ -1,4 +1,4 @@
-----TDD Test Driven development
+---------------------------------------------------------------TDD Test Driven development---------------------------------------------------------
 Es una filosofia de desarrollo de software que nos indica que antes de escribir el software debemos escribir los test que este debe superar, el test literalmente debe guiar el dearrollo.
 
 CIRCULO DE LA VIDA TDD (ciclo)
@@ -8,8 +8,8 @@ REFACTOR : Limpiar el código.
 
 Los test: consisten en lanzar una función y debemos indicarle que es lo que esperamos de ella.
 
---------------------------------------------------------------------
-DDD: Domain-Driven Desing.
+-----------------------------------------------------------------DDD: Domain-Driven Desing.--------------------------------------------------------
+
 Enfoque de desarrollo de software, que representa distintas claves, terminologías y patrones utilizados para desarrollar donde el dominio es lo más central e importante de una determinada organización.
 Entonces es tomar los datos de mi cliente del dominio y tomar esa plastilina y modelarla.
 
